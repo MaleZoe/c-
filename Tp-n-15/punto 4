@@ -1,0 +1,19 @@
+i DROP TABLE IF EXISTS medicamentos
+ii CREATE TABLE medicamentos (
+    codigo INT AUTO_INCREMENT,
+    nombre VARCHAR(20),
+    laboratorio VARCHAR(20),
+    precio FLOAT,
+    cantidad INT,
+    PRIMARY KEY (codigo)
+); 
+iii DESCRIBE medicamentos;
+iv INSERT INTO medicamentos (nombre, laboratorio, precio, cantidad) VALUES
+    ('Sertal', 'Roche', 5.2, 100),
+    ('Buscapina', 'Roche', 4.10, 200),
+    ('Amoxidal 500', 'Bayer', 15.60, 100);
+v SELECT codigo, nombre, laboratorio, precio, cantidad FROM medicamentos;
+vi INSERT INTO medicamentos (codigo, nombre, laboratorio, precio, cantidad) VALUES (1, 'Ibuprofeno', 'Genérico', 3.50, 150);
+vii INSERT INTO medicamentos (codigo, nombre, laboratorio, precio, cantidad) VALUES (12, 'Paracetamol 500', 'Bago', 1.90, 200);
+viii INSERT INTO medicamentos (nombre, laboratorio, precio, cantidad) VALUES
+('Bayaspirina', 'Bayer', 2.10, 150);

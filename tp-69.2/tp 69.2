@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string insertarEspaciosEntreLetras(const string & input);
+
+int main() {
+    string cadena;
+    cout << "Ingrese una cadena: ";
+    getline(cin, cadena);
+    string resultado = insertarEspaciosEntreLetras(cadena);
+    cout << "Resultado: " << resultado << endl;
+
+    return 0;
+}
+
+string insertarEspaciosEntreLetras(const string & input) {
+    string resultado;
+    for (size_t i = 0; i < input.length(); i++) {
+        resultado += input[i];
+        if (i != input.length() - 1) {
+            resultado += ' ';
+        }
+    }
+    return resultado;
+}

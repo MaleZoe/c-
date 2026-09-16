@@ -1,0 +1,25 @@
+i DROP TABLE IF EXISTS articulos;
+ii CREATE TABLE articulos (
+    codigo INT,
+    nombre VARCHAR(20),
+    descripcion VARCHAR(30),
+    precio FLOAT,
+    cantidad INT
+);
+iii DESCRIBE articulos;
+iv INSERT INTO articulos (código, nombre, descripción, precio, cantidad) VALUES
+    (1, 'impresora', 'Epson Stylus C45', 400.80, 20),
+    (2, 'impresora', 'Epson Stylus C85', 500, 30),
+    (3, 'monitor', 'Samsung 14', 800, 10),
+    (4, 'teclado', 'ingles Biswal', 100, 50),
+    (5, 'teclado', 'español Biswal', 90, 50);
+v UPDATE articulos
+   SET precio = 400
+   WHERE descripcion = 'Epson Stylus C45';
+
+Vii UPDATE articulos
+     SET cantidad = 50, precio = 550
+     WHERE codigo = 2;
+Viii UPDATE articulos
+     SET cantidad = 100
+     WHERE cantidad = 1000;

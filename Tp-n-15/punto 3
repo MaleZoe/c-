@@ -1,0 +1,20 @@
+i DROP TABLE IF EXISTS alumnos;
+ii CREATE TABLE alumnos (  
+    legajo VARCHAR(4) NOT NULL,  
+    documento VARCHAR(8) NOT NULL,  
+    apellido VARCHAR(30),  
+    nombre VARCHAR(30),  
+    domicilio VARCHAR(30),  
+    PRIMARY KEY (legajo)  
+  );
+iii INSERT INTO alumnos (legajo, documento, apellido, nombre, domicilio) VALUES
+('A233', '22345345', 'Perez', 'Mariana', 'Colon 234'),
+('A567', '23545345', 'Morales', 'Marcos', 'Avellaneda 348'),
+('B654', '24356345', 'Gonzalez', 'Analia', 'Caseros 444'),
+('A642', '20254125', 'Torres', 'Ramiro', 'Dinamarca 209'),
+('B509', '20445778', 'Miranda', 'Carmen', 'Uspallata 999'),
+('C777', '28111444', 'Figueroa', 'Natalia', 'Sarmiento 856');
+iv SELECT * FROM alumnos;
+v INSERT INTO alumnos (legajo, documento, apellido, nombre, domicilio) VALUES ('D001', '12345678', 'Gomez', 'Juan', '123 Calle Falsa');  
+INSERT INTO alumnos (legajo, documento, apellido, nombre, domicilio) VALUES ('D002', '87654321', 'Gomez', 'Juan', '456 Avenida Verdad');
+vi INSERT INTO alumnos (legajo, documento, apellido, nombre, domicilio) VALUES ('A233', '30123458', 'Garcia', 'Juan', 'Belgrano 789');

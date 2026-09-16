@@ -1,0 +1,34 @@
+i DROP TABLE IF EXISTS peliculas;
+ii CREATE TABLE peliculas (
+    codigo INT AUTO_INCREMENT,
+    titulo VARCHAR(30) NOT NULL,
+    actor VARCHAR(20),
+    duracion INT,
+    PRIMARY KEY (codigo)
+);
+iii DESCRIBE peliculas;
+iv INSERT INTO peliculas (titulo, actor, duracion) VALUES
+                         ('Mision imposible', 'Tom Cruise', 120),
+                         ('Harry Potter y la piedra filosofal', 'Daniel R.', 180),
+                         ('Harry Potter y la camara secreta', 'Daniel R.', 190),
+                         ('Mision imposible 2', 'Tom Cruise', 150),
+                         ('Titanic', 'L. Di Caprio', 220),
+                         ('Mujer bonita', 'R. Gere-J. Roberts', 200);
+v SELECT * FROM peliculas;
+vi INSERT INTO peliculas (codigo, titulo, actor, duracion) VALUES (NULL, 'Elsa y                      Fred', 'China Zorrilla', 90);
+vii INSERT INTO peliculas (titulo, actor, duracion) VALUES (NULL, 'China Zorrilla', 90);
+viii INSERT INTO peliculas (titulo, actor, duracion) VALUES ('Mr. Johns', NULL, NULL);
+ix INSERT INTO peliculas (codigo, titulo, actor, duracion) VALUES (0, '', '', 0);
+x UPDATE peliculas
+  SET duracion = 120
+  WHERE duracion IS NULL;
+xi UPDATE peliculas
+   SET actor = 'Desconocido'
+    WHERE actor IS NULL;
+xii SELECT * FROM peliculas;
+
+                    Xiii UPDATE peliculas
+                         SET actor = 'Desconocido'
+                         WHERE actor = '';
+                   Xiv DELETE FROM peliculas
+                          WHERE titulo = '';
